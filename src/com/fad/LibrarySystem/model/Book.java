@@ -28,15 +28,26 @@ package com.fad.LibrarySystem.model;
  *   - genre  : category of the book (e.g. "Fiction", "Classic", "Sci-Fi")
  */
 public class Book extends LibraryItem {
+    
+    private String author;
+    private  String genre;
+    public String getGenre(){
+        return genre;
 
-    public String author;
-    private String genre;
+    }
+    public String getAuthor(){
+            return author;
 
+    }
+        
     public Book(String bookId, String title, String author, String genre) {
         super(bookId, title);
+    
+    
         this.author = author;
         this.genre  = genre;
     }
+
 
     /**
      * Returns the full set of seed books inserted into the database on first startup.
@@ -114,7 +125,6 @@ public class Book extends LibraryItem {
     public String toString() { return getInfo(); }
 
     public String getBookId() { return itemId; }
-    public String getAuthor() { return author; }
 
     public void setBookId(String bookId) { this.itemId = bookId; }
     public void setAuthor(String author) { this.author = author; }

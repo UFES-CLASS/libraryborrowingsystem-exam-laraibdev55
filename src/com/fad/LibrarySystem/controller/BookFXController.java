@@ -103,7 +103,7 @@ public class BookFXController {
     public void initialize() {
         colBookId.setCellValueFactory(d -> new SimpleStringProperty(d.getValue().getBookId()));
         colTitle .setCellValueFactory(d -> new SimpleStringProperty(d.getValue().getTitle()));
-        colAuthor.setCellValueFactory(d -> new SimpleStringProperty(d.getValue().author));
+        colAuthor.setCellValueFactory(d -> new SimpleStringProperty(d.getValue().getAuthor()));
         colGenre .setCellValueFactory(d -> new SimpleStringProperty(d.getValue().getGenre()));
         // Status has no direct getter, so we convert the boolean isAvailable() to a label
         colStatus.setCellValueFactory(d ->

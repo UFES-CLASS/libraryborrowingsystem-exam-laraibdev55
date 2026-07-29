@@ -369,7 +369,7 @@ public class DatabaseManager {
             try (ResultSet rs = ps.executeQuery()) {
                 List<String> ids = new ArrayList<>();
                 while (rs.next()) ids.add(rs.getString("item_id"));
-                return ids.toArray(new String[0]);
+                return ids.toArray(new String[ids.size()]);
             }
         } catch (SQLException e) {
             throw new RuntimeException("loadBorrowedItemIds failed: " + e.getMessage(), e);
